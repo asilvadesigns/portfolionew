@@ -159,7 +159,7 @@ strong, em {
     width: 50%;
   }
 }
-@media (min-width: 40em) {
+@media (min-width: 50em) {
   .post__item {
     width: 33.33333%;
   }
@@ -185,6 +185,10 @@ strong, em {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.post__title {
+  font-size: 1em;
 }
 
 .nav:after {
