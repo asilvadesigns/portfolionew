@@ -146,10 +146,23 @@ strong, em {
 
 .post__item {
   overflow: hidden;
-  width: 33.33333%;
+  width: 100%;
   height: 33.33333vh;
   transition: opacity 0.35s ease-in-out;
   opacity: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media (min-width: 30em) {
+  .post__item {
+    width: 50%;
+  }
+}
+@media (min-width: 40em) {
+  .post__item {
+    width: 33.33333%;
+  }
 }
 .post__item:hover {
   opacity: 0.7;
