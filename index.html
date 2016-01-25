@@ -19,7 +19,7 @@ active: home
         {% endif %}
 
         {% if post.categories contains 'experiments' %}
-        <a class="post__item post__item--experiments" href="{{ post.url | prepend: site.baseurl }}">
+        <a class="post__item post__item--experiments" href="{{ post.url | prepend: site.baseurl }}" style="{{ post.style }}">
             <h5 class="post__title"><strong>{{ post.title }}</strong></h5>
         </a>
         {% endif %}
