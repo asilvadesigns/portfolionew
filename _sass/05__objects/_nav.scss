@@ -1,0 +1,24 @@
+.nav {
+    @include clearfix;
+}
+
+.nav--left {
+    float: left;
+}
+
+.nav--right {
+    float: right;
+}
+
+.nav__item {
+    display: block;
+    float: left;
+
+    padding: rhythm(1);
+}
+
+.nav__item--logo {
+    text-decoration: none;
+
+    @include font(bold);
+}

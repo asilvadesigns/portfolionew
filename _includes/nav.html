@@ -1,0 +1,68 @@
+<div class="alert">
+    this site is under construction as of 1/25/2016 1:54pm. <a href="https://github.com/asilvadesigns/portfolionew" target="_blank">check recent commits</a>
+</div>
+<nav class="nav">
+
+    <div class="nav--left">
+        <a class="nav__item nav__item--logo" href="/">{{ site.author }}</a>
+    </div>
+    <div class="nav--right">
+        {% assign nav__menu = site.pages %}
+        {% assign nav__group = 'navigation' %}
+        {% include nav__menu.html %}
+
+        {% for page in site.pages %}
+        {% if page.nav__group == 'class_groups' %}
+
+        {% for post in site.posts %}
+        {% if post.groups contains page.title %}
+        <a class="nav__item" href="{{ post.url | prepend: site.baseurl }}">
+            {{ page.title }}
+        </a>
+        {% endif %}
+        {% endfor %}
+
+        {% endif %}
+        {% endfor %}
+    </div>
+    <!--<div class="collapse [ nav__secondary ]" id="nav__secondary">-->
+        <!--<a class="nav__link [ nav__toggle ]" id="nav__secondary__toggle">-->
+            <!--<div>-->
+                <!--<span class="nav__icon [ nav__dots ]">-->
+                    <!--<span class="nav__dot">.</span>-->
+                    <!--<span class="nav__dot">.</span>-->
+                    <!--<span class="nav__dot">.</span>-->
+                    <!--</span>-->
+                <!--<span class="nav__text">close menu</span>-->
+                <!--</div>-->
+            <!--</a>-->
+        <!--<div id="nav__secondary__collapse">-->
+            <!--{% for category in site.categories %}-->
+            <!--{% assign first = category | first %}-->
+            <!--<a class="collapse__link [ nav__link nav__collapse ]" data-toggle="collapse" data-target="{{ '#' | append: first }}">-->
+                <!--<span class="nav__text">{{ category | first }}</span>-->
+                <!--<span class="nav__icon [ icon icon-minus ]" id="{{ first | append: '__icon' }}"></span>-->
+                <!--</a>-->
+            <!--<div class="progress__parent [ collapse__panel collapse in ]" id="{{ category | first }}">-->
+                <!--{% for posts in category %}-->
+                <!--{% for post in posts reversed %}-->
+                <!--<div class="progress__child collapse__item">-->
+                    <!--<a class="nav__link" data-target="nav__isActive" href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">-->
+                        <!--<span class="nav__text">{{ post.title }}</span>-->
+                        <!--</a>-->
+                    <!--{% if post.groups.size != 0 %}-->
+                    <!--<div class="progress__item">-->
+                        <!--{% for group in post.groups %}-->
+                        <!--<span class="nav__icon [ group__icon group__icon--{{ group }} ]"></span>-->
+                        <!--{% endfor %}-->
+                        <!--</div>-->
+                    <!--{% endif %}-->
+                    <!--</div>-->
+                <!--{% endfor %}-->
+                <!--{% endfor %}-->
+                <!--</div>-->
+            <!--{% endfor %}-->
+            <!--</div>-->
+        <!--</div>-->
+</nav>
+

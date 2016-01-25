@@ -1,0 +1,12 @@
+name: Alberto Silva Portfolio
+author: AlbertoSilva
+highlighter: pygments # or rouge or null
+exclude: ["node_modules", "gulpfile.js", "package.json"]
+
+baseurl: "" # use for local
+# baseurl: "/academy" # use for github
+# url: ""
+
+# Build settings
+permalink: /:title
+markdown: redcarpet

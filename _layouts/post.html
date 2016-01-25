@@ -1,0 +1,33 @@
+---
+layout: default
+class: sub
+---
+<main class="site__main">
+    <article class="wrapper">
+        <section>
+            {{ content }}
+        </section>
+        <section>
+            {% if page.link %}
+            <p>
+                <a class="btn btn--external" href="{{ page.link }}" target="blank">View Site</a>
+            </p>
+            {% endif %}
+            <h5 class="gamma [ title title--primary ]">Selected Works</h5>
+            <ul class="grid [ post__list ]">
+                {% for post in site.categories['portfolio'] %}
+                <li class="col--3--large [ post__item ]">
+                    <a class="post__link" href="{{ post.url | append: '#portfolio__gallery' | prepend: site.baseurl }}">
+                        <span="title--secondary">{{ post.title }}</span>
+                    </a>
+                    <ul class="post__tags [ list--inline list--commas ]">
+                        {% for item in post.tags %}
+                            <li>{{ item.product }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </article>
+</main>

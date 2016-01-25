@@ -1,0 +1,200 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  color: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'MarkWeb-Bold';
+  src: url("../fonts/mark/MarkWeb-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: 'MarkWeb';
+  src: url("../fonts/mark/MarkWeb.woff") format("woff");
+}
+@font-face {
+  font-family: 'MarkScWeb-Bold';
+  src: url("../fonts/mark/MarkScWeb-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: 'MarkScWeb';
+  src: url("../fonts/mark/MarkScWeb.woff") format("woff");
+}
+html {
+  line-height: 1.5;
+}
+
+body {
+  font-family: "MarkWeb", sans-serif;
+  font-feature-settings: "kern" 1, "ss01" 1, "pnum" 1;
+  -webkit-font-feature-settings: "kern" 1, "ss01" 1, "pnum" 1;
+  -moz-font-feature-settings: "kern" 1, "ss01" 1, "pnum" 1;
+  -moz-font-feature-settings: "kern=1, ss01=1, pnum=1";
+  -ms-font-feature-settings: "kern" 1, "ss01" 1, "pnum" 1;
+  -o-font-feature-settings: "kern" 1, "ss01" 1, "pnum" 1;
+}
+
+h1, .h1 {
+  font-size: 3.15733em;
+}
+
+h2, .h2 {
+  font-size: 2.36859em;
+}
+
+h3, .h3 {
+  font-size: 1.77689em;
+}
+
+h4, .h4 {
+  font-size: 1.333em;
+}
+
+h5, .h5 {
+  font-size: 1em;
+}
+
+h6, .h6 {
+  font-size: 0.75019em;
+}
+
+p, header {
+  margin-bottom: 1.5em;
+}
+
+img {
+  max-width: 100%;
+}
+
+strong, em {
+  font-family: "MarkWeb-Bold", sans-serif;
+}
+
+.small-caps {
+  font-family: "MarkScWeb", sans-serif;
+  text-transform: lowercase;
+}
+
+.alert {
+  background-color: crimson;
+  color: white;
+  padding: 0.75em 1.5em;
+}
+
+.wrapper {
+  padding: 0 1.5em;
+  margin: 0 auto;
+  max-width: 40em;
+}
+
+.wrapper--large {
+  max-width: 80em;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.45em 0.9em;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.3em;
+}
+
+.posts {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.post__item {
+  overflow: hidden;
+  width: 33.33333%;
+  height: 33.33333vh;
+  transition: opacity 0.35s ease-in-out;
+  opacity: 1;
+}
+.post__item:hover {
+  opacity: 0.7;
+}
+
+.post__item--portfolio {
+  font-size: 0;
+}
+
+.post__item--experiments,
+.post__item--blog {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.nav:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.nav--left {
+  float: left;
+}
+
+.nav--right {
+  float: right;
+}
+
+.nav__item {
+  display: block;
+  float: left;
+  padding: 1.5em;
+}
+
+.nav__item--logo {
+  text-decoration: none;
+  font-family: "MarkWeb-Bold", sans-serif;
+}

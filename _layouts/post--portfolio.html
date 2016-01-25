@@ -1,0 +1,22 @@
+---
+layout: default
+class: sub
+---
+<main class="portfolio">
+    <article class="wrapper wrapper--large">
+        <section id="portfolio__gallery" class="swiper-container">
+            <div class="swiper-wrapper">
+                {{ content }}
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </section>
+        <section class="wrapper">
+            {% if page.link %}
+            <p>
+                <a class="btn btn--external" href="{{ page.link }}" target="blank">View Site</a>
+            </p>
+            {% endif %}
+        </section>
+    </article>
+</main>

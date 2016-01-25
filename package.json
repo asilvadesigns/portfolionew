@@ -1,0 +1,33 @@
+{
+  "name": "albertosilvaportfolio",
+  "version": "1.0.0",
+  "description": "Alberto Silva web designer portfolio.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asilvadesigns/portfolionew.git"
+  },
+  "keywords": [
+    "Alberto",
+    "Silva",
+    "Web",
+    "Designer",
+    "Portfolio"
+  ],
+  "author": "Alberto Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asilvadesigns/portfolionew/issues"
+  },
+  "homepage": "https://github.com/asilvadesigns/portfolionew#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-plumber": "^1.0.1"
+  }
+}

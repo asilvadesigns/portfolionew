@@ -1,0 +1,17 @@
+@function fontsize($input: $raw__font-size) {
+    @return ($input / 16) * 100%;
+}
+
+//  http://compass-style.org/reference/compass/typography/vertical_rhythm/#function-rhythm
+//  Rhythm Function:
+//  Multiply a number by the declared line-height,
+//  useful for vertical rhythm.
+//
+//  Usage:
+//  p {
+//      margin-top: rhythm(1);
+//  }
+@function rhythm($local__input) {
+    $rhythm: $local__input * $base__line-height * $base__font-unit;
+    @return $rhythm;
+}
