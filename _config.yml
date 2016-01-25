@@ -4,7 +4,9 @@ highlighter: pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 #baseurl: "" # use for local
-baseurl: "/portfolionew" # use for github
+#baseurl: "/portfolionew" # use for github
+baseurl: "" # use for github
+url: "http://albertosilva.me/"
 # url: ""
 
 # Build settings
