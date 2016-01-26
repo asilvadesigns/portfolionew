@@ -1,0 +1,16 @@
+.gallery {
+    display: flex;
+
+    flex-flow: row wrap;
+}
+
+.gallery__item {
+    font-size: 0;
+    overflow: hidden;
+
+    width: percentage(1/1);
+
+    @media (min-width: 50em) {
+        width: percentage(1/2);
+    }
+}

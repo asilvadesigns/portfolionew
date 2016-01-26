@@ -15,10 +15,17 @@
     float: left;
 
     padding: rhythm(1);
+
+    text-decoration: none;
+}
+
+.nav__item--gallery {
+    color: $primary__color;
 }
 
 .nav__item--svg {
     position: relative;
+
     display: inline-block;
 
     &:hover {
@@ -29,11 +36,11 @@
 }
 
 .nav__item--svg:after {
-    content:"";
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-}
 
+    content: '';
+}

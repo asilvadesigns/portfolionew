@@ -25,6 +25,9 @@
     @else if $font-family == bold--serif--italic {
         font-family: "AlegreyaBoldItalic", sans-serif;
     }
+    @else if $font-family == icon {
+        font-family: "outlined-iconset";
+    }
 }
 //
 //  Clearfix

@@ -15,13 +15,15 @@
 //  04 Base
 @import
     "04__base/font/mark",
+    "04__base/font/outlined",
     "04__base/typography";
 
 //  05 Objects
 @import
     "05__objects/alert",
-    "05__objects/logo",
-    "05__objects/wrapper",
     "05__objects/button",
+    "05__objects/gallery",
+    "05__objects/logo",
+    "05__objects/nav",
     "05__objects/posts",
-    "05__objects/nav";
+    "05__objects/wrapper";
