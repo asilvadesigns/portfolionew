@@ -4,22 +4,23 @@ title: home
 active: home
 ---
 <div class="posts">
-    {% for post in site.posts reversed %}
+
+    {% for post in site.posts %}
 
         {% if post.categories contains 'portfolio' %}
-        <a class="post__item post__item--portfolio" href="{{ post.url | prepend: site.baseurl }}" style="background-image: url( {{ post.feature | prepend: site.baseurl }} );">
+        <a class="post__item post__item--image" href="{{ post.url | prepend: site.baseurl }}" style="background-image: url( {{ post.feature | prepend: site.baseurl }} );">
             <!--<img class="post__image" src="{{ post.feature | prepend: site.baseurl }}">-->
         </a>
         {% endif %}
 
         {% if post.categories contains 'blog' %}
-        <a class="post__item post__item--blog" href="{{ post.url | prepend: site.baseurl }}">
+        <a class="post__item post__item--text" href="{{ post.url | prepend: site.baseurl }}">
             <h5 class="post__title"><strong>{{ post.title }}</strong></h5>
         </a>
         {% endif %}
 
         {% if post.categories contains 'experiments' %}
-        <a class="post__item post__item--experiments" href="{{ post.url | prepend: site.baseurl }}" style="{{ post.style }}">
+        <a class="post__item post__item--text" href="{{ post.url | prepend: site.baseurl }}" style="{{ post.style }}">
             <h5 class="post__title"><strong>{{ post.title }}</strong></h5>
         </a>
         {% endif %}

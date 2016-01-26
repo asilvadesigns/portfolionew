@@ -1,5 +1,6 @@
 //  01 Settings
 @import
+    "01__settings/01__color",
     "01__settings/02__typography";
 
 //  02 Tools
@@ -19,6 +20,7 @@
 //  05 Objects
 @import
     "05__objects/alert",
+    "05__objects/logo",
     "05__objects/wrapper",
     "05__objects/button",
     "05__objects/posts",

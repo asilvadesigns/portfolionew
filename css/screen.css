@@ -117,6 +117,14 @@ strong, em {
   padding: 0.75em 1.5em;
 }
 
+.logo__svg {
+  width: 1.5em;
+}
+
+.logo__svg--large {
+  width: 3em;
+}
+
 .wrapper {
   padding: 0 1.5em;
   margin: 0 auto;
@@ -168,12 +176,11 @@ strong, em {
   opacity: 0.7;
 }
 
-.post__item--portfolio {
+.post__item--image {
   font-size: 0;
 }
 
-.post__item--experiments,
-.post__item--blog {
+.post__item--text {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -211,7 +218,19 @@ strong, em {
   padding: 1.5em;
 }
 
-.nav__item--logo {
-  text-decoration: none;
-  font-family: "MarkWeb-Bold", sans-serif;
+.nav__item--svg {
+  position: relative;
+  display: inline-block;
+}
+.nav__item--svg:hover .logo__svg {
+  cursor: pointer;
+}
+
+.nav__item--svg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }

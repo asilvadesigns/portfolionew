@@ -17,8 +17,23 @@
     padding: rhythm(1);
 }
 
-.nav__item--logo {
-    text-decoration: none;
+.nav__item--svg {
+    position: relative;
+    display: inline-block;
 
-    @include font(bold);
+    &:hover {
+        .logo__svg {
+            cursor: pointer;
+        }
+    }
 }
+
+.nav__item--svg:after {
+    content:"";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
