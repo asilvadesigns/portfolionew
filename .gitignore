@@ -2,3 +2,5 @@
 *.css.map
 *.swp
 node_modules/
+img/backup/
+_site/img/backup/
