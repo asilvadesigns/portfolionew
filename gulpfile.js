@@ -38,24 +38,27 @@ gulp.task('compass', function() {
         .pipe(plumber())
         .pipe(compass({
             config_file:  'config.rb',
-            css:          '_site/css',
+            //  css:          '_site/css',
+            css:          '_includes',
             sass:         '_sass'
         }))
         .pipe(autoprefixer({
             browsers:  ['last 2 versions'],
             cascade:   false
         }))
-        .pipe(gulp.dest('_site/css'))
+        //  .pipe(gulp.dest('_site/css'))
+        .pipe(gulp.dest('_includes'))
         .pipe(browserSync.reload({
             stream:true
         }))
-        .pipe(gulp.dest('css'));
+        //  .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('_includes'));
 });
 
 //  Watch
 gulp.task('watch', function () {
     gulp.watch('_sass/**/*.scss', ['compass']);
-    gulp.watch(['*.html', 'js/*.js', '_layouts/*.html', '_posts/*', '_includes/*.html'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', 'js/*.js', '_layouts/*.html', '_posts/*', '_includes/*.html', '_includes/*.css'], ['jekyll-rebuild']);
 });
 
 //  Default
