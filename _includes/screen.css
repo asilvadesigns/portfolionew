@@ -184,29 +184,14 @@ strong, em {
 .btn {
   display: inline-block;
   padding: 0.45em 0.9em;
+  transition: background-color 0.35s ease-in-out;
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
   border-radius: 0.3em;
+  background-color: #dc4129;
 }
-
-.gallery {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-}
-
-.gallery__item {
-  font-size: 0;
-  overflow: hidden;
-  width: 100%;
-}
-@media (min-width: 50em) {
-  .gallery__item {
-    width: 50%;
-  }
+.btn:hover {
+  background-color: #c63b25;
 }
 
 .logo__svg {
@@ -277,6 +262,7 @@ strong, em {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  box-sizing: border-box;
 }
 @media (min-width: 30em) {
   .post__item {
@@ -299,17 +285,8 @@ strong, em {
 }
 
 .post__item--text {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  text-decoration: none;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  padding: 3em 1.5em;
+  max-width: 30em;
 }
 
 .post__title {

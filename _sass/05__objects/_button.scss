@@ -1,10 +1,16 @@
 .btn {
     display: inline-block;
 
-    padding: rhythm(.3) rhythm(.6);
+    padding: rhythm(0.3) rhythm(0.6);
 
+    transition: background-color 0.35s ease-in-out;
     text-decoration: none;
 
-    background-color: rgba(0,0,0,0.1);
-    border-radius: rhythm(.2);
+    color: $white;
+    border-radius: rhythm(0.2);
+    background-color: $primary__color;
+
+    &:hover {
+        background-color: shade($primary__color, 10%);
+    }
 }
