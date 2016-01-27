@@ -1,0 +1,19 @@
+.list {
+    list-style: none;
+}
+
+.list--product {
+    margin-bottom: rhythm(1);
+
+    > li {
+        display: inline-block;
+    }
+
+    > li:nth-last-child(2):not(:first-child):before {
+        content: " and ";
+    }
+
+    > li:last-child:not(:only-child):before {
+        content: " for ";
+    }
+}

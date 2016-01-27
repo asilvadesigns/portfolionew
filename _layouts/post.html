@@ -2,5 +2,26 @@
 layout: portfolio
 ---
 <article class="posts">
-    {{ content }}
+    <header class="post__item post__item--text">
+        <div class="post__header">
+            <h5>{{ page.title }}</h5>
+            <ul class="list list--product">
+                {% for product in page.tags %}
+                <li>{{ product.tag }}</li>
+                {% endfor %}
+                <li>{{ page.client }}</li>
+            </ul>
+            <p>
+                {{ content }}
+            </p>
+            {% if page.link %}
+            <p>
+                <a class="btn btn--external" href="{{ page.link | prepend: site.baseurl }}" target="_blank">View Site</a>
+            </p>
+            {% endif %}
+        </div>
+    </header>
+    {% for item in page.images %}
+    <a class="post__item post__item--image" href="{{ item.image | prepend: site.baseurl }}" style="background-image: url( {{ item.image | prepend: site.baseurl }} );"></a>
+    {% endfor %}
 </article>
