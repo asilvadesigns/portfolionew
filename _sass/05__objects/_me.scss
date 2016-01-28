@@ -1,0 +1,8 @@
+.me {
+}
+.me__name {
+}
+.me__title {
+    @include font(regular--sc);
+    text-transform: lowercase;
+}
