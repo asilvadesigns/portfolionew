@@ -1,10 +1,16 @@
 <script src="{{ '/js/jquery.min.js' | prepend: site.baseurl }}"></script>
-<script src="{{ '/js/lightbox.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/js/jquery.swipebox.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/js/blazy.min.js' | prepend: site.baseurl }}"></script>
 <script>
     window.onload = function() {
+
+        ;(function( $ ) {
+            $( '.swipebox' ).swipebox();
+        })(jQuery);
+
         ;(function() {
             var bLazy = new Blazy();
         })();
+
     };
 </script>

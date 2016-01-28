@@ -1,0 +1,344 @@
+//
+//
+//  ! Swipebox v1.3.0 | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox
+
+// Gradient mixin
+@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
+    background-color: $from;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+    background-image: -webkit-linear-gradient(top, $from, $to);
+    background-image:    -moz-linear-gradient(top, $from, $to);
+    background-image:      -o-linear-gradient(top, $from, $to);
+    background-image:         linear-gradient(to bottom, $from, $to);
+}
+
+//  Bar mixin
+@mixin bar($color) {
+    background-color: $color;
+
+    @include css-gradient( $color, darken($color, 20%) );
+}
+
+html.swipebox-html.swipebox-touch {
+    overflow: hidden!important;
+}
+
+#swipebox-overlay img {
+    border: none!important;
+}
+
+#swipebox-overlay {
+    position: fixed;
+    z-index: 99999!important;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    user-select: none;
+}
+
+#swipebox-container {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+#swipebox-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    white-space: nowrap;
+
+    .slide {
+        line-height: 1px;
+
+        display: inline-block;
+
+        width: 100%;
+        height: 100%;
+
+        text-align: center;
+
+        &:before {
+            display: inline-block;
+
+            width: 1px;
+            height: 50%;
+            margin-right: -1px;
+
+            content: '';
+        }
+
+        img,
+        .swipebox-video-container,
+        .swipebox-inline-container {
+            display: inline-block;
+
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 100%;
+            margin: 0;
+            padding: 0;
+
+            vertical-align: middle;
+        }
+
+        //  .swipebox-video-container {
+        //      background:none;
+        //      max-width: 1140px;
+        //      max-height: 100%;
+        //      width: 100%;
+        //      padding:5%;
+        //      box-sizing: border-box;
+
+        //      .swipebox-video{
+        //          width: 100%;
+        //          height: 0;
+        //          padding-bottom: 56.25%;
+        //          overflow: hidden;
+        //          position: relative;
+
+        //          iframe{
+        //              width: 100%!important;
+        //              height: 100%!important;
+        //              position: absolute;
+        //              top: 0; left: 0;
+        //          }
+        //      }
+        //  }
+    }
+
+    .slide-loading {
+        background: url(/img/swipebox/loader.gif) no-repeat center center;
+    }
+}
+
+#swipebox-bottom-bar,
+#swipebox-top-bar {
+    position: absolute;
+    z-index: 999;
+    left: 0;
+
+    width: 100%;
+    //  height: 50px;
+
+    transition: 0.5s;
+}
+
+#swipebox-bottom-bar {
+    bottom: -50px;
+
+    &.visible-bars {
+        transform: translate3d(0,-50px,0);
+    }
+}
+
+#swipebox-top-bar {
+    top: -50px;
+
+    &.visible-bars {
+        transform: translate3d(0,50px,0);
+    }
+}
+
+#swipebox-title {
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+#swipebox-prev,
+#swipebox-next,
+#swipebox-close {
+    font-family: 'outlined-iconset' !important;
+
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#swipebox-arrows {
+    display: block;
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+#swipebox-prev,
+#swipebox-next {
+    width: 50%;
+    padding: rhythm(1) 0;
+
+    text-align: center;
+}
+
+#swipebox-prev {
+    float: left;
+
+    &:before {
+        content: '\e087';
+    }
+}
+
+#swipebox-next {
+    float: right;
+
+    &:before{
+        content: '\e08c';
+    }
+}
+
+#swipebox-close {
+    position: absolute;
+    z-index: 9999;
+    top: rhythm(1);
+    right: rhythm(1);
+
+    &:before {
+        content: '\e010';
+    }
+}
+
+.swipebox-no-close-button #swipebox-close {
+    display: none;
+}
+
+#swipebox-prev,
+#swipebox-next {
+    &.disabled {
+        opacity: 0.3;
+    }
+}
+
+.swipebox-no-touch {
+    #swipebox-overlay.rightSpring #swipebox-slider {
+        animation: rightSpring 0.3s;
+    }
+
+    #swipebox-overlay.leftSpring  #swipebox-slider {
+        animation: leftSpring 0.3s;
+    }
+}
+
+.swipebox-touch {
+    #swipebox-container {
+        &:before,
+        &:after {
+            position: absolute;
+            z-index: 999;
+            top: 0;
+
+            width: 20px;
+            height: 100%;
+
+            content: ' ';
+            transition: all 0.3s ease;
+
+            opacity: 0;
+
+            backface-visibility: hidden;
+        }
+
+        &:before {
+            left: 0;
+
+            box-shadow: inset 10px 0 10px -8px #656565;
+        }
+
+        &:after {
+            right: 0;
+
+            box-shadow: inset -10px 0 10px -8px #656565;
+        }
+    }
+
+    #swipebox-overlay.leftSpringTouch #swipebox-container {
+        &:before {
+            opacity: 1;
+        }
+    }
+
+
+    #swipebox-overlay.rightSpringTouch #swipebox-container {
+        &:after {
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes rightSpring {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: -30px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes leftSpring {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 30px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+//
+//  Skin
+//
+#swipebox-overlay {
+    background: #0d0d0d;
+}
+
+#swipebox-bottom-bar,
+#swipebox-top-bar {
+    //@include bar(#0d0d0d);
+    opacity: 0.95;
+    background: #000000;
+    text-shadow: 1px 1px 1px black;
+}
+
+#swipebox-bottom-bar {
+    //border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#swipebox-top-bar {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 43px;
+    //border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    color: white!important;
+}
