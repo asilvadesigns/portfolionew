@@ -1,6 +1,8 @@
 <script src="{{ '/js/blazy.min.js' | prepend: site.baseurl }}"></script>
 <script>
-    ;(function() {
-        var bLazy = new Blazy();
-    })();
+    window.onload = function() {
+        ;(function() {
+            var bLazy = new Blazy();
+        })();
+    };
 </script>
