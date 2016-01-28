@@ -24,9 +24,11 @@ active: home
     {% for post in site.posts %}
 
         {% if post.categories contains 'portfolio' %}
-        <a class="post__item post__item--image" href="{{ post.url | prepend: site.baseurl }}" style="background-image: url( {{ post.feature | prepend: site.baseurl }} );">
-            <!--<img class="post__image" src="{{ post.feature | prepend: site.baseurl }}">-->
+        <!--<a class="b-lazy post__item post__item--image" href="{{ post.url | prepend: site.baseurl }}" style="background-image: url( {{ post.feature | prepend: site.baseurl }} );">-->
+        <a class="lazy post__item post__item--image" href="{{ post.url | prepend: site.baseurl }}">
+            <img class="b-lazy" src="/img/placehold.jpg" data-src="{{ post.feature | prepend: site.baseurl }}">
         </a>
+        <!--</a>-->
         {% endif %}
 
         {% if post.categories contains 'blog' %}
@@ -43,3 +45,4 @@ active: home
 
     {% endfor %}
 </div>
+

@@ -306,6 +306,10 @@ a.post__item:hover {
   opacity: 0.7;
 }
 
+.lazy.post__item {
+  padding-bottom: 0;
+}
+
 .post__item--image {
   font-size: 0;
 }
@@ -339,6 +343,16 @@ a.post__item:hover {
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
   break-inside: avoid;
+}
+
+.b-lazy {
+  transition: opacity 500ms ease-in-out;
+  max-width: 100%;
+  opacity: 0;
+}
+
+.b-lazy.b-loaded {
+  opacity: 1;
 }
 
 .wrapper {
