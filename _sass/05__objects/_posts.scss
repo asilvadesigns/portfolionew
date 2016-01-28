@@ -7,8 +7,13 @@
 .post__item {
     overflow: hidden;
 
+    box-sizing: border-box;
     width: percentage(1/1);
     padding-bottom: percentage(9 / 16);
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 
     @media (min-width: 30em) {
         width: percentage(1/2);
@@ -19,11 +24,6 @@
         width: percentage(1/3);
         padding-bottom: percentage(3 / 16);
     }
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    box-sizing: border-box;
 }
 
 a.post__item {
@@ -40,17 +40,27 @@ a.post__item {
     font-size: 0;
 }
 
-.post__item--text {
-    width: 100%;
-    padding-bottom: 0;
+.post__item--intro {
+    padding: 0 rhythm(1) rhythm(1);
+
+    width: percentage(3/3);
+
+    @media (min-width: 30em) {
+        width: percentage(2/3);
+    }
+
+    @media (min-width: 70em) {
+        width: percentage(1/3);
+    }
 }
 
-.post__header,
-.post__body {
-    padding: 0 rhythm(1);
-    margin-right: auto;
-}
+.post__body--column {
+    @media (min-width: 40em) {
+        column-count: 2;
+        column-gap: rhythm(1);
+    }
 
-.post__body {
-    max-width: 30em;
+    > p {
+        break-inside: avoid;
+    }
 }

@@ -1,0 +1,15 @@
+.logo__svg {
+    width: rhythm(1);
+}
+
+.logo__svg--large {
+    width: rhythm(2);
+}
+
+.logo__title {
+}
+
+.logo__subtitle {
+    @include font(regular--sc);
+    text-transform: lowercase;
+}

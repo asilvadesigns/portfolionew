@@ -1,46 +1,39 @@
 .nav {
-    @include clearfix;
-}
+    display: flex;
 
-.nav--left {
-    float: left;
-}
-
-.nav--right {
-    float: right;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav__item {
-    display: block;
-    float: left;
-
     padding: rhythm(1);
-
-    text-decoration: none;
 }
 
 .nav__item--gallery {
     color: $primary__color;
 }
 
-.nav__item--svg {
+.nav__item--logo {
     position: relative;
-
-    display: inline-block;
 
     &:hover {
         .logo__svg {
             cursor: pointer;
         }
     }
+
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        content: '';
+    }
 }
 
-.nav__item--svg:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    content: '';
+.nav__item--contact {
+    display: flex;
 }

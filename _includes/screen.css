@@ -40,6 +40,10 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: 'MarkWeb-Bold';
   src: url("../fonts/mark/MarkWeb-Bold.woff") format("woff");
@@ -158,7 +162,7 @@ h6, .h6 {
   font-size: 0.75019em;
 }
 
-p, header {
+p {
   margin-bottom: 1.5em;
 }
 
@@ -219,46 +223,48 @@ strong, em {
   width: 3em;
 }
 
-.nav:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.nav--left {
-  float: left;
-}
-
-.nav--right {
-  float: right;
+.nav {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .nav__item {
-  display: block;
-  float: left;
   padding: 1.5em;
-  text-decoration: none;
 }
 
 .nav__item--gallery {
   color: #dc4129;
 }
 
-.nav__item--svg {
+.nav__item--logo {
   position: relative;
-  display: inline-block;
 }
-.nav__item--svg:hover .logo__svg {
+.nav__item--logo:hover .logo__svg {
   cursor: pointer;
 }
-
-.nav__item--svg:after {
+.nav__item--logo:after {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   content: '';
+}
+
+.nav__item--contact {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .posts {
@@ -272,12 +278,12 @@ strong, em {
 
 .post__item {
   overflow: hidden;
+  box-sizing: border-box;
   width: 100%;
   padding-bottom: 56.25%;
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  box-sizing: border-box;
+  background-size: cover;
 }
 @media (min-width: 30em) {
   .post__item {
@@ -304,19 +310,35 @@ a.post__item:hover {
   font-size: 0;
 }
 
-.post__item--text {
+.post__item--intro {
+  padding: 0 1.5em 1.5em;
   width: 100%;
-  padding-bottom: 0;
+}
+@media (min-width: 30em) {
+  .post__item--intro {
+    width: 66.66667%;
+  }
+}
+@media (min-width: 70em) {
+  .post__item--intro {
+    width: 33.33333%;
+  }
 }
 
-.post__header,
-.post__body {
-  padding: 0 1.5em;
-  margin-right: auto;
+@media (min-width: 40em) {
+  .post__body--column {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 1.5em;
+    -moz-column-gap: 1.5em;
+    column-gap: 1.5em;
+  }
 }
-
-.post__body {
-  max-width: 30em;
+.post__body--column > p {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 .wrapper {
