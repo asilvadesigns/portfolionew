@@ -318,18 +318,18 @@ a.post__item:hover {
   padding: 0 1.5em 1.5em;
   width: 100%;
 }
-@media (min-width: 30em) {
-  .post__item--intro {
-    width: 66.66667%;
-  }
-}
 @media (min-width: 70em) {
   .post__item--intro {
     width: 33.33333%;
   }
 }
 
-@media (min-width: 40em) {
+.post__body--column {
+  -webkit-column-count: initial;
+  -moz-column-count: initial;
+  column-count: initial;
+}
+@media (min-width: 30em) {
   .post__body--column {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -337,6 +337,13 @@ a.post__item:hover {
     -webkit-column-gap: 1.5em;
     -moz-column-gap: 1.5em;
     column-gap: 1.5em;
+  }
+}
+@media (min-width: 70em) {
+  .post__body--column {
+    -webkit-column-count: initial;
+    -moz-column-count: initial;
+    column-count: initial;
   }
 }
 .post__body--column > p {

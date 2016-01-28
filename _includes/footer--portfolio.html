@@ -1,16 +1,12 @@
 <footer>
     <nav class="nav">
-        <div class="nav--left">
-            <a class="nav__item nav__item--svg" href="/">
-                <object class="logo__svg" data="{{ '/img/logo.svg' | prepend: site.baseurl }}" type="image/svg+xml">
-                    <img class="logo__svg" src="{{ '/img/logo.svg' | prepend: site.baseurl }}" alt="{{ site.author }}">
-                </object>
-            </a>
-        </div>
-        <div class="nav--right">
-            <a class="nav__item nav__item--gallery" href="/">
-                <span class="icon icon-squares"></span>
-            </a>
-        </div>
+        <a class="nav__item nav__item--svg" href="/">
+            <object class="logo__svg" data="{{ '/img/logo.svg' | prepend: site.baseurl }}" type="image/svg+xml">
+                <img class="logo__svg" src="{{ '/img/logo.svg' | prepend: site.baseurl }}" alt="{{ site.author }}">
+            </object>
+        </a>
+        <a class="nav__item nav__item--gallery" href="/">
+            <span class="icon icon-squares"></span>
+        </a>
     </nav>
 </footer>

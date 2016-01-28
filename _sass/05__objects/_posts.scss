@@ -49,19 +49,21 @@ a.post__item {
 
     width: percentage(3/3);
 
-    @media (min-width: 30em) {
-        width: percentage(2/3);
-    }
-
     @media (min-width: 70em) {
         width: percentage(1/3);
     }
 }
 
 .post__body--column {
-    @media (min-width: 40em) {
+    column-count: initial;
+
+    @media (min-width: 30em) {
         column-count: 2;
         column-gap: rhythm(1);
+    }
+
+    @media (min-width: 70em) {
+        column-count: initial;
     }
 
     > p {
