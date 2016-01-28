@@ -1,5 +1,5 @@
 ---
-layout: portfolio
+layout: default
 ---
 <article class="posts">
     <header class="post__item post__item--intro">
