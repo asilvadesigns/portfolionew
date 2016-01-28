@@ -48,6 +48,27 @@ a.post__item {
     font-size: 0;
 }
 
+.post__item--page {
+    display: flex;
+
+    padding-bottom: 0;
+
+    text-transform: capitalize;
+
+    color: white;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.post__item--about {
+    background-color: $primary__color;
+}
+
+.post__item--colophon {
+    background-color: $neutral__color;
+}
+
 .post__item--intro {
     width: percentage(3/3);
     padding: 0 rhythm(1) rhythm(1);

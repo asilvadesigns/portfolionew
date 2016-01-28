@@ -3,14 +3,11 @@
 <script src="{{ '/js/blazy.min.js' | prepend: site.baseurl }}"></script>
 <script>
     window.onload = function() {
-
-        ;(function( $ ) {
-            $( '.swipebox' ).swipebox();
+        ;(function($) {
+            $('.swipebox').swipebox();
         })(jQuery);
-
         ;(function() {
             var bLazy = new Blazy();
         })();
-
     };
 </script>

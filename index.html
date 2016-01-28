@@ -6,9 +6,8 @@ active: home
 <div class="posts">
 
     <!--<div class="post__item post__item-intro">-->
-        <!--<div class="post__header me">-->
-            <!--<h5 class="me__name"><strong>Alberto Silva</strong></h5>-->
-            <!--<span class="me__title">designer</span>-->
+        <!--<div class="post__header">-->
+            <!--<h5><strong>About</strong></h5>-->
         <!--</div>-->
         <!--<div class="post__body post__body-column">-->
             <!--<p>My name is Alberto Silva, I'm a Christian, a husband, and a father.</p>-->
@@ -16,26 +15,20 @@ active: home
         <!--</div>-->
     <!--</div>-->
 
+    <a class="post__item post__item--page post__item--about" href="{{ 'about/index.html' | prepend: site.baseurl }}">
+        <h5><strong>about</strong></h5>
+    </a>
+
     {% for post in site.posts %}
 
-        {% if post.categories contains 'portfolio' %}
         <a class="lazy post__item post__item--image" href="{{ post.url | prepend: site.baseurl }}">
             <img class="b-lazy" src="/img/placehold.jpg" data-src="{{ post.feature | prepend: site.baseurl }}">
         </a>
-        {% endif %}
-
-        {% if post.categories contains 'blog' %}
-        <a class="post__item post__item--text" href="{{ post.url | prepend: site.baseurl }}">
-            <h5 class="post__title"><strong>{{ post.title }}</strong></h5>
-        </a>
-        {% endif %}
-
-        {% if post.categories contains 'experiments' %}
-        <a class="post__item post__item--text" href="{{ post.url | prepend: site.baseurl }}" style="{{ post.style }}">
-            <h5 class="post__title"><strong>{{ post.title }}</strong></h5>
-        </a>
-        {% endif %}
 
     {% endfor %}
-</div>
 
+    <a class="post__item post__item--page post__item--colophon" href="{{ 'colophon/index.html' | prepend: site.baseurl }}">
+        <h5><strong>colophon</strong></h5>
+    </a>
+
+</div>

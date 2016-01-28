@@ -335,6 +335,29 @@ a.post__item:hover {
   font-size: 0;
 }
 
+.post__item--page {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 0;
+  text-transform: capitalize;
+  color: white;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.post__item--about {
+  background-color: #dc4129;
+}
+
+.post__item--colophon {
+  background-color: #3a4344;
+}
+
 .post__item--intro {
   width: 100%;
   padding: 0 1.5em 1.5em;
@@ -647,4 +670,10 @@ html.swipebox-html.swipebox-touch {
   font-size: 15px;
   line-height: 43px;
   color: white !important;
+}
+
+.wrapper {
+  max-width: 30em;
+  margin-right: auto;
+  padding-left: 1.5em;
 }
