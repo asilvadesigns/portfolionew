@@ -11,6 +11,7 @@ active: home
             <object class="logo__svg" data="{{ '/img/logo--white.svg' | prepend: site.baseurl }}" type="image/svg+xml">
                 <img class="logo__svg" src="{{ '/img/logo--white.svg' | prepend: site.baseurl }}" alt="{{ site.author }}">
             </object>
+            <strong>&nbsp;About</strong>
         </a>
         {% endif %}
     {% endfor %}
@@ -30,6 +31,9 @@ active: home
         {% if page.group contains 'last' %}
         <a class="post__item post__item--page post__item--{{ page.title }}" href="{{ page.url | prepend: site.baseurl }}">
             <h5><strong>{{ page.title }}</strong></h5>
+            <object class="logo__svg" data="{{ '/img/logo--white.svg' | prepend: site.baseurl }}" type="image/svg+xml">
+                <img class="logo__svg" src="{{ '/img/logo--white.svg' | prepend: site.baseurl }}" alt="{{ site.author }}">
+            </object>
         </a>
         {% endif %}
     {% endfor %}
