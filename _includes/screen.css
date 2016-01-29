@@ -69,11 +69,8 @@ table {
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  speak: none;
-  line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-right: .1em;
 }
 
 .icon-delete:before {
@@ -450,8 +447,12 @@ Borrowed from http://tobiasahlin.com/spinkit/
   content: " for ";
 }
 
-.logo__svg {
+.svg--logo {
   height: 3em;
+}
+
+.svg--gallery {
+  height: 1.125em;
 }
 
 .me__title {
@@ -490,13 +491,13 @@ Borrowed from http://tobiasahlin.com/spinkit/
   color: #dc4129;
 }
 
-.nav__item--logo {
+.nav__item--svg {
   position: relative;
 }
-.nav__item--logo:hover .logo__svg {
+.nav__item--svg:hover .svg {
   cursor: pointer;
 }
-.nav__item--logo:after {
+.nav__item--svg:after {
   position: absolute;
   top: 0;
   right: 0;

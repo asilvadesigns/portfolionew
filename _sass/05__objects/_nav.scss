@@ -20,11 +20,11 @@
     color: $primary__color;
 }
 
-.nav__item--logo {
+.nav__item--svg {
     position: relative;
 
     &:hover {
-        .logo__svg {
+        .svg {
             cursor: pointer;
         }
     }

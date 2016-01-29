@@ -1,10 +1,12 @@
 <nav class="nav">
-    <a class="nav__item nav__item--logo" href="/">
-        <object class="logo__svg" data="{{ '/img/logo.svg' | prepend: site.baseurl }}" type="image/svg+xml">
-            <img class="logo__svg" src="{{ '/img/logo.svg' | prepend: site.baseurl }}" alt="{{ site.author }}">
+    <a class="nav__item nav__item--svg" href="/">
+        <object class="svg svg--logo" data="{{ '/img/logo.svg' | prepend: site.baseurl }}" type="image/svg+xml">
+            <img class="svg svg--logo" src="{{ '/img/logo.svg' | prepend: site.baseurl }}" alt="{{ site.author }}">
         </object>
     </a>
-    <a class="nav__item nav__item--gallery" href="/">
-        <span class="icon icon-squares"></span>
+    <a class="nav__item nav__item--svg" href="/">
+        <object class="svg svg--gallery" data="{{ '/img/gallery.svg' | prepend: site.baseurl }}" type="image/svg+xml">
+            <img class="svg svg--gallery" src="{{ '/img/gallery.svg' | prepend: site.baseurl }}" alt="{{ site.author }}">
+        </object>
     </a>
 </nav>
