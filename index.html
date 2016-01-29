@@ -15,9 +15,13 @@ active: home
         <!--</div>-->
     <!--</div>-->
 
-    <a class="post__item post__item--page post__item--about" href="{{ 'about/index.html' | prepend: site.baseurl }}">
-        <h5><strong>about</strong></h5>
-    </a>
+    {% for page in site.pages %}
+        {% if page.group contains 'first' %}
+        <a class="post__item post__item--page post__item--{{ page.title }}" href="{{ page.url | prepend: site.baseurl }}">
+            <h5><strong>{{ page.title }}</strong></h5>
+        </a>
+        {% endif %}
+    {% endfor %}
 
     {% for post in site.posts %}
 
@@ -27,8 +31,12 @@ active: home
 
     {% endfor %}
 
-    <a class="post__item post__item--page post__item--colophon" href="{{ 'colophon/index.html' | prepend: site.baseurl }}">
-        <h5><strong>colophon</strong></h5>
-    </a>
+    {% for page in site.pages %}
+        {% if page.group contains 'last' %}
+        <a class="post__item post__item--page post__item--{{ page.title }}" href="{{ page.url | prepend: site.baseurl }}">
+            <h5><strong>{{ page.title }}</strong></h5>
+        </a>
+        {% endif %}
+    {% endfor %}
 
 </div>
