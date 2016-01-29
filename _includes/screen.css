@@ -576,15 +576,6 @@ Borrowed from http://tobiasahlin.com/spinkit/
   padding: 0 1.5em;
 }
 
-a.post__item--page {
-  padding: 1.95em 0;
-  transition: opacity 0.35s ease-in-out;
-  opacity: 1;
-}
-a.post__item--page:hover {
-  opacity: 0.7;
-}
-
 .post__item--about {
   background-color: #dc4129;
 }
@@ -593,7 +584,7 @@ a.post__item--page:hover {
   background-color: #3a4344;
 }
 
-.post__item--image:hover .post__details {
+.post__item:hover .post__details {
   opacity: 1;
 }
 
@@ -602,6 +593,7 @@ a.post__item--page:hover {
   position: absolute;
   z-index: 300;
   top: 0;
+  left: 0;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -623,4 +615,5 @@ a.post__item--page:hover {
   max-width: 30em;
   margin-right: auto;
   padding-left: 1.5em;
+  padding-right: 1.5em;
 }

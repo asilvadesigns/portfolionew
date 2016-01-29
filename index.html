@@ -11,7 +11,9 @@ active: home
             <object class="logo__svg" data="{{ '/img/logo--white.svg' | prepend: site.baseurl }}" type="image/svg+xml">
                 <img class="logo__svg" src="{{ '/img/logo--white.svg' | prepend: site.baseurl }}" alt="{{ site.author }}">
             </object>
-            <strong>&nbsp;About</strong>
+            <div class="post__details">
+                <h5><strong>About</strong></h5>
+            </div>
         </a>
         {% endif %}
     {% endfor %}
@@ -30,10 +32,12 @@ active: home
     {% for page in site.pages %}
         {% if page.group contains 'last' %}
         <a class="post__item post__item--page post__item--{{ page.title }}" href="{{ page.url | prepend: site.baseurl }}">
-            <h5><strong>{{ page.title }}</strong></h5>
             <object class="logo__svg" data="{{ '/img/logo--white.svg' | prepend: site.baseurl }}" type="image/svg+xml">
                 <img class="logo__svg" src="{{ '/img/logo--white.svg' | prepend: site.baseurl }}" alt="{{ site.author }}">
             </object>
+            <div class="post__details">
+                <h5><strong>Colophon</strong></h5>
+            </div>
         </a>
         {% endif %}
     {% endfor %}
