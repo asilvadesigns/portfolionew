@@ -1,0 +1,10 @@
+<footer>
+    <nav class="nav">
+        <p class="nav__item" href="/">
+            All works Alberto Silva unless otherwise noted.
+        </p>
+        <a class="nav__item" href="/">
+            <span class="icon icon-squares"></span>
+        </a>
+    </nav>
+</footer>

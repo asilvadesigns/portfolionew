@@ -1,7 +1,7 @@
 ---
 layout: portfolio
 ---
-<article class="posts">
+<article class="posts gallery">
     <header class="post__item post__item--intro">
         <div class="post__body">
             <h5><strong>{{ page.title }}</strong></h5>
@@ -24,7 +24,7 @@ layout: portfolio
         </div>
     </header>
     {% for item in page.images %}
-    <a class="lazy swipebox post__item post__item--image" href="{{ item.image | prepend: site.baseurl }}">
+    <a class="lazy post__item post__item--image" href="{{ item.image | prepend: site.baseurl }}">
         <img class="b-lazy" src="/img/placehold.jpg" data-src="{{ item.image | prepend: site.baseurl }}">
     </a>
     {% endfor %}

@@ -19,7 +19,7 @@ h4, .h4 { font-size: $h4__font-size; }
 h5, .h5 { font-size: $h5__font-size; }
 h6, .h6 { font-size: $h6__font-size; }
 
-p {
+p, .page__header {
     margin-bottom: rhythm(1);
 }
 
