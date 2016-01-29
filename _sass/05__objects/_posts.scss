@@ -58,19 +58,6 @@
     padding: 0 rhythm(1);
 }
 
-//  a.post__item--page {
-//      padding: rhythm(1.3) 0;
-//
-//      transition: opacity 0.35s ease-in-out;
-//
-//      opacity: 1;
-//
-//      &:hover {
-//          opacity: 0.7;
-//      }
-//  }
-
-
 .post__item--about {
     background-color: $primary__color;
 }
@@ -83,6 +70,10 @@
     .post__details {
         opacity: 1;
     }
+}
+
+.post__item--logo {
+    padding: rhythm(2) 0;
 }
 
 .post__details {

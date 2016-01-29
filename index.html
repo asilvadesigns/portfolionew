@@ -7,7 +7,7 @@ active: home
 
     {% for page in site.pages %}
         {% if page.group contains 'first' %}
-        <a class="post__item post__item--page post__item--{{ page.title }}" href="{{ page.url | prepend: site.baseurl }}">
+        <a class="post__item post__item--logo post__item--page post__item--{{ page.title }}" href="{{ page.url | prepend: site.baseurl }}">
             <object class="logo__svg" data="{{ '/img/logo--white.svg' | prepend: site.baseurl }}" type="image/svg+xml">
                 <img class="logo__svg" src="{{ '/img/logo--white.svg' | prepend: site.baseurl }}" alt="{{ site.author }}">
             </object>
@@ -31,7 +31,7 @@ active: home
 
     {% for page in site.pages %}
         {% if page.group contains 'last' %}
-        <a class="post__item post__item--page post__item--{{ page.title }}" href="{{ page.url | prepend: site.baseurl }}">
+        <a class="post__item post__item--logo post__item--page post__item--{{ page.title }}" href="{{ page.url | prepend: site.baseurl }}">
             <object class="logo__svg" data="{{ '/img/logo--white.svg' | prepend: site.baseurl }}" type="image/svg+xml">
                 <img class="logo__svg" src="{{ '/img/logo--white.svg' | prepend: site.baseurl }}" alt="{{ site.author }}">
             </object>

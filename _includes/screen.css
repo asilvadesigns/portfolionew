@@ -588,6 +588,10 @@ Borrowed from http://tobiasahlin.com/spinkit/
   opacity: 1;
 }
 
+.post__item--logo {
+  padding: 3em 0;
+}
+
 .post__details {
   font-size: 1rem;
   position: absolute;
