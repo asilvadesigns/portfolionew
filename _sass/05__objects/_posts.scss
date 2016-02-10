@@ -40,6 +40,8 @@
     font-size: 0;
 }
 
+
+.post__item--icon,
 .post__item--page {
     display: flex;
 
@@ -58,6 +60,15 @@
     padding: 0 rhythm(1);
 }
 
+.post__item--icon {
+
+    i {
+        font-size: $h2__font-size;
+    }
+
+    background-color: $neutral__color--light;
+}
+
 .post__item--about {
     background-color: $primary__color;
 }
@@ -72,6 +83,7 @@
     }
 }
 
+.post__item--icon,
 .post__item--logo {
     padding: rhythm(2) 0;
 }

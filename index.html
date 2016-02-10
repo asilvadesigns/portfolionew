@@ -19,14 +19,22 @@ active: home
     {% endfor %}
 
     {% for post in site.posts %}
-
+        {% if post.images %}
         <a class="lazy post__item post__item--image" href="{{ post.url | prepend: site.baseurl }}">
             <img class="b-lazy" src="/img/placehold.jpg" data-src="{{ post.feature | prepend: site.baseurl }}">
             <div class="post__details">
                 <h5><strong>{{ post.title }}</strong></h5>
             </div>
         </a>
-
+        {% endif %}
+        {% if post.icon %}
+        <a class="post__item post__item--icon" href="{{ post.url | prepend: site.baseurl }}">
+            <i class="ion {{ post.icon }}"></i>
+            <div class="post__details">
+                <h5><strong>{{ post.title }}</strong></h5>
+            </div>
+        </a>
+        {% endif %}
     {% endfor %}
 
     {% for page in site.pages %}
